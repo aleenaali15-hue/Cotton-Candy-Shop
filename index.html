@@ -649,7 +649,7 @@ function renderSettings(){
 function redeem(){const v=$('rcode').value.trim().toLowerCase();$('rcode').value='';const m=$('rmsg');if(!v)return;
  if(v==='test2015'){startTest();return}
  if(TEST.on){m.textContent='Finish test mode first (nothing is saved during a test).';return}
- const c={'2hundo':[200,'two'],'grand':[1000,'grand']}[v];if(!c){m.textContent='That code does not work.';return}
+ const c={'2hundo':[200,'two'],'super5000':[5000,'super5000'] 'grand':[1000,'grand']}[v];if(!c){m.textContent='That code does not work.';return}
  if(S.used[c[1]]){m.textContent='You already used that code! ✅';return}
  S.used[c[1]]=true;S.c+=c[0];save();hud();m.textContent='🎉 +'+c[0]+' ⭐ added!'}
 function startTest(){if(TEST.on)return;TEST.snap=JSON.stringify(S);TEST.on=true;TEST.end=Date.now()+300000;
